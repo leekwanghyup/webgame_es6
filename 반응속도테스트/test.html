@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<ul class="menu">
+    <li ><a href="#" data-text="About Us">About Us</a></li>
+    <li ><a href="#" data-text="Company"> Company</a></li>
+</ul>
+
+<ul class="menu2">
+    <li><a href="#"" data-animation="Service">Service</a></li>
+    <li><a href="#" data-animation="Community">Community</a></li>
+</ul>
+</body>
+</html>
+<style>
+a:visited{color: inherit;}
+.menu2 a{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.5;    
+    position: relative;
+    color: red;
+}
+
+/* 오른쪽에서 왼쪽 크기가 줄어든다. */
+.menu2 a::before{  
+    position: absolute;
+    top: 0; left: 0;
+    color: #ccc;
+    content: attr(data-animation);
+    width: 100%;
+    overflow: hidden;
+}
+
+.menu2 a:hover::before{
+    width: 0%;
+    transition: all 0.6s;
+}
+
+
+
+
+li { list-style: none;}
+.menu a{ 
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.5;    
+    color: #ccc;
+    position: relative;
+}
+
+.menu a::before{
+    position: absolute;
+    top: 0; left: 0;
+    color: red;
+    content: attr(data-text);
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.menu a:hover::before {
+    width: 100%;
+    transition: all 0.7s;
+}
+
+
+</style>

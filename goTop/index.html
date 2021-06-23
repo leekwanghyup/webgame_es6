@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+<div>
+    <h2>200px 이상 스크롤 시 go Top 버튼 생성</h2>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita eaque voluptates rem vitae quam, cumque quia ab quas autem nobis ratione voluptatum labore tempora temporibus, voluptate culpa tempore alias suscipit.
+</div>
+<a href="#" class="goTop">
+    <i class="fas fa-arrow-up"></i>
+</a>
+    <script>
+        $(window).on('scroll',()=>{
+            let scrollValue = $(this).scrollTop();  
+            console.log(scrollValue);
+            let test = $('.goTop') 
+            if($(this).scrollTop() >= 200){
+                test.fadeIn();
+            } else{
+                test.fadeOut();
+            } 
+        })
+
+        $('.goTop').on('click',function(e){
+            e.preventDefault(); 
+            $('html, body').stop().animate({ scrollTop : 0},500);
+        }); 
+    </script>
+</body>
+</html>
+<style>
+    div{height: 3000px;
+        color: #fff;
+        background: rgb(72,59,134);
+        background: linear-gradient(180deg, rgba(72,59,134,1) 9%, rgba(192,193,54,1) 59%, rgba(72,182,52,1) 100%);
+    }
+    .goTop { 
+        position: fixed;
+        bottom: 50px; right: 50px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        color: #fff;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: none;
+    }
+</style>

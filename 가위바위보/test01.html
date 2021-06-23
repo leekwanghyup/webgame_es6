@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="apple">사과</button>
+    <button class="removeEvent">이벤트삭제</button>
+<script>
+let $appleBtn = document.querySelector('.apple');
+let $removeEvent = document.querySelector('.removeEvent');
+let appleEvent = $appleBtn.addEventListener('click',()=>{
+    alert('사과');
+})
+$removeEvent.addEventListener('click',()=>{
+    $appleBtn.removeEventListener('click',appleEvent);
+})
+
+</script>
+</body>
+</html>

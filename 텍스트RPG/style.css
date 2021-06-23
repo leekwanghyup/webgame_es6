@@ -1,0 +1,18 @@
+select {
+    width: 200px;
+}
+
+#screen { display: none;}
+
+#game-menu { 
+    display: none;
+    margin-top: 20px;
+    border: 1px solid green;
+}
+
+#battle-menu {
+    display: none;
+    border: 1px solid red;
+}
+
+#monster-stat{ display: none;}

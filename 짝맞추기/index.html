@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+    <style>
+        .row { display: flex;}
+        .col{ width: 100px; height: 100px; border : 1px solid ; cursor: pointer; font-size: 40px; color: #000; text-align: center; line-height: 100px; position: relative; z-index: 10;}
+        .row:nth-child(1) .col:nth-child(1) { background-color: blue;}
+        .row:nth-child(1) .col:nth-child(2) { background-color: red;}
+        .row:nth-child(1) .col:nth-child(3) { background-color: orange;}
+        .row:nth-child(1) .col:nth-child(4) { background-color: orchid;}
+        .row:nth-child(2) .col:nth-child(1){background-color: peachpuff;}
+        .row:nth-child(2) .col:nth-child(2){background-color: green;}
+        .row:nth-child(2) .col:nth-child(3){background-color: blue;}
+        .row:nth-child(2) .col:nth-child(4){background-color: aqua;}
+        .cover { background-color: cornflowerblue; width: 100px; height: 100px; position: absolute; z-index: 100; border: 1px solid; top:0; left: 0;}
+        .open { z-index: -100; top: -100%; opacity: 0;; transition: all 0.3s;}
+    </style>
+</head>
+<body>
+    
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+    </div>
+    <button class="reest">reset</button>
+</body>
+</html>

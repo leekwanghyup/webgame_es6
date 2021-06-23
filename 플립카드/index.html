@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<div class="card">
+    <div class="card_inner">
+        <div class="front">
+            <h2>마우스 오버시 뒤집힘</h2>
+        </div>
+        <div class="back">
+            <h2>뒤집힘</h2>
+            <h2>뒤집힘</h2>
+            <h2>뒤집힘</h2>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<style>
+.card{
+    width: 300px;
+    height: 300px;
+    border: 1px solid red;
+}    
+.card_inner {
+    position: relative;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 100%;
+    height: 100%;
+    perspective: 10000px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card_inner.flip {
+  transform: rotateY(180deg); 
+} 
+
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0; left: 0;
+    backface-visibility: hidden; 
+}
+.front {
+    background-color: #bbb;
+    color: black;
+}
+
+.back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+</style>
+
+
+<script>
+    $('.card').on('click',()=>{
+        $('.card_inner').toggleClass('flip');
+    })
+</script>
+  

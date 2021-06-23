@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+let number = Array(45).fill('').map((elem,index) => index + 1 ) ; // 1 ~ 45 
+let suffle = [];
+
+/// 요소의 삭제 
+// 매개변수가 2개 일때 
+let test01 = ['가', '나', '다', '라','마' ];
+let after01 = test01.splice(2,2); // 2번 인덱스값부터 2개 값을 뽑음 
+console.log(test01); // 원본배열에서 [ 다 ,라 ]가 삭제되고 
+console.log(after01); // 여기에 값이 담긴다. 
+
+// 매개변수가 하나 일때
+console.log('매개변수가 하나일 때 ') 
+let test02 = [1,4,7,8,5,6,7,11,9,10];
+let after02 = test02.splice(2); // 2번 인덱스값부터 마지막까지 즉 [7,8,5,6,7,11,9,10]
+console.log(after02)
+
+// 음수 매개변수 
+console.log('음수 매개 변수')
+let test03 = ['가', '나', '다', '라','마' ];
+after03 = test03.slice(-2); // 뒤에서 2번째 위치에서 모두 제거 
+console.log("splice 후: ", after03);
+console.log("원본 : ",test03);
+
+// 요소의 추가 
+console.log(' ---------- 요소의 추가 ------------ ')
+let test04 = ['가', '나', '다', '라','마' ];
+test04.splice(1,0,'abc'); // 1번인덱스에 추가, 하나도 제거하지 않음 , 'abc'추가 
+console.log(test04);
+
+
+
+</script>
+</body>
+</html>

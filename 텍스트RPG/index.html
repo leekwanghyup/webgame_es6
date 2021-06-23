@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form id="start-screen">
+    <input class="name-input" placeholder="캐릭터 이름 입력">
+    <button>시작</button>
+</form>
+<div id="screen">
+    <h3>영웅정보</h3>
+    <p>Name : <span class="hero-name">----</span></p>
+    <p>Lv : <span class="hero-level"></span></p>
+    <p>HP : <span class="hero-hp"></span></p>
+    <p>XP : <span class="hero-xp"></span></p>
+    <p>Att : <span class="hero-att"></span></p>
+</div>
+<form id="game-menu">
+    <h3>게임메뉴</h3>
+    <select>
+        <option value="adventure">1.모험</option>
+        <option value="rest">2.휴식</option>
+        <option value="end">3.종료</option>
+    </select>
+    <button>입력</button>
+</form>
+<form id="battle-menu">
+    <h3>전투메뉴</h3>
+    <select>
+        <option value="attack">1.공격</option>
+        <option value="recovery">2.회복</option>
+        <option value="escape">3.도망</option>
+    </select>
+    <button>입력</button>
+</form>
+<div id="message"></div>
+<div id="monster-stat"> <!-- 몬스터 스탯 -->
+    <h3>몬스터 정보</h3>
+    <p>Name : <span class="monster-name"></span></p>
+    <p>Hp : <span class="monster-hp"></span></p>
+    <p>Att : <span class="monster-att"></span></p>
+</div>
+
+
+
+<script src="index.js"></script>
+</body>
+</html>
